@@ -1,0 +1,812 @@
+<title>Proposta de Remuneração — Consultor de Vendas Externas ES</title>
+<style>
+  :root{
+    --bg:#EEF1F3;
+    --surface:#FFFFFF;
+    --surface-alt:#E4E9EC;
+    --ink:#171B1F;
+    --ink-soft:#4B5560;
+    --ink-faint:#7C868E;
+    --line:#C9D2D8;
+    --accent:#B0592E;
+    --accent-ink:#7A3C1D;
+    --accent-soft:#E7D3C4;
+    --track:#D6DCDF;
+    --shadow: 0 1px 2px rgba(23,27,31,0.06), 0 8px 24px rgba(23,27,31,0.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#12161B;
+      --surface:#181D23;
+      --surface-alt:#1E252B;
+      --ink:#EDEFF1;
+      --ink-soft:#A7B0B8;
+      --ink-faint:#79828A;
+      --line:#2B333A;
+      --accent:#E08A52;
+      --accent-ink:#F2B78B;
+      --accent-soft:#3A2A1E;
+      --track:#2A3238;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#12161B; --surface:#181D23; --surface-alt:#1E252B; --ink:#EDEFF1;
+    --ink-soft:#A7B0B8; --ink-faint:#79828A; --line:#2B333A; --accent:#E08A52;
+    --accent-ink:#F2B78B; --accent-soft:#3A2A1E; --track:#2A3238;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+  }
+  :root[data-theme="light"]{
+    --bg:#EEF1F3; --surface:#FFFFFF; --surface-alt:#E4E9EC; --ink:#171B1F;
+    --ink-soft:#4B5560; --ink-faint:#7C868E; --line:#C9D2D8; --accent:#B0592E;
+    --accent-ink:#7A3C1D; --accent-soft:#E7D3C4; --track:#D6DCDF;
+    --shadow: 0 1px 2px rgba(23,27,31,0.06), 0 8px 24px rgba(23,27,31,0.05);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .display{
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+    text-wrap:balance;
+  }
+  .num{
+    font-family:"SF Mono","Cascadia Mono",Consolas,Menlo,monospace;
+    font-variant-numeric:tabular-nums;
+  }
+  .eyebrow{
+    font-family:-apple-system,"Segoe UI",sans-serif;
+    font-size:0.72rem;
+    letter-spacing:0.11em;
+    text-transform:uppercase;
+    color:var(--accent-ink);
+    font-weight:600;
+  }
+
+  .shell{
+    max-width:1180px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:220px minmax(0,1fr);
+    gap:0;
+    min-height:100vh;
+  }
+
+  nav.rail{
+    position:sticky;
+    top:0;
+    align-self:start;
+    height:100vh;
+    padding:2.4rem 1.2rem 2rem 1.6rem;
+    border-right:1px solid var(--line);
+    display:flex;
+    flex-direction:column;
+    gap:1.4rem;
+  }
+  nav.rail .brand{
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    font-size:1rem;
+    font-weight:600;
+    letter-spacing:0.01em;
+    margin-bottom:0.6rem;
+  }
+  nav.rail .brand small{
+    display:block;
+    font-family:-apple-system,sans-serif;
+    font-size:0.68rem;
+    color:var(--ink-faint);
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    font-weight:500;
+    margin-top:0.15rem;
+  }
+  nav.rail ol{
+    list-style:none;
+    margin:0; padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:0.15rem;
+    counter-reset:sec;
+  }
+  nav.rail li{counter-increment:sec;}
+  nav.rail a{
+    display:flex;
+    align-items:baseline;
+    gap:0.55rem;
+    padding:0.4rem 0.5rem;
+    border-radius:5px;
+    color:var(--ink-soft);
+    text-decoration:none;
+    font-size:0.85rem;
+    transition:background 0.15s ease, color 0.15s ease;
+  }
+  nav.rail a::before{
+    content:counter(sec, decimal-leading-zero);
+    font-family:"SF Mono","Cascadia Mono",Consolas,monospace;
+    font-size:0.72rem;
+    color:var(--ink-faint);
+    font-variant-numeric:tabular-nums;
+  }
+  nav.rail a:hover{ background:var(--surface-alt); color:var(--ink); }
+  nav.rail a:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+
+  main{ min-width:0; }
+  section{
+    padding:4.2rem clamp(1.6rem,4vw,4rem);
+    border-bottom:1px solid var(--line);
+  }
+  section.alt{ background:var(--surface-alt); }
+  section:last-of-type{ border-bottom:none; }
+
+  h1.hero{
+    font-size:clamp(2.3rem, 4.4vw, 3.4rem);
+    line-height:1.08;
+    margin:0.6rem 0 0.9rem;
+    font-weight:600;
+  }
+  .hero-sub{
+    color:var(--ink-soft);
+    font-size:1.08rem;
+    max-width:34rem;
+    margin:0 0 2.2rem;
+  }
+  .cover-meta{
+    display:flex;
+    gap:2.4rem;
+    flex-wrap:wrap;
+    border-top:1px solid var(--line);
+    padding-top:1.4rem;
+  }
+  .cover-meta div{ display:flex; flex-direction:column; gap:0.25rem; }
+  .cover-meta .label{ font-size:0.72rem; color:var(--ink-faint); text-transform:uppercase; letter-spacing:0.08em; }
+  .cover-meta .val{ font-size:1.05rem; font-weight:600; }
+  #metaInput{
+    font:inherit; font-weight:inherit; color:var(--accent-ink);
+    background:var(--surface-alt); border:1px solid var(--line); border-radius:5px;
+    width:9ch; padding:0.1rem 0.4rem; -moz-appearance:textfield;
+  }
+  #metaInput:focus{ outline:2px solid var(--accent); outline-offset:1px; }
+  #metaInput::-webkit-outer-spin-button, #metaInput::-webkit-inner-spin-button{ margin-left:0.3rem; }
+
+  h2{
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    font-size:clamp(1.5rem,2.4vw,1.9rem);
+    margin:0.35rem 0 1.6rem;
+    font-weight:600;
+    text-wrap:balance;
+  }
+  p.lead{
+    color:var(--ink-soft);
+    max-width:42rem;
+    font-size:1.02rem;
+    margin:-0.6rem 0 1.8rem;
+  }
+
+  .big-number{
+    font-size:clamp(2.6rem,6vw,4rem);
+    font-weight:700;
+    color:var(--accent);
+    line-height:1;
+    letter-spacing:-0.01em;
+  }
+  .big-number-cap{ font-size:0.42em; color:var(--ink-faint); font-weight:500; margin-left:0.35rem; }
+
+  .quarter-bars{ margin-top:2.2rem; display:flex; flex-direction:column; gap:0.85rem; max-width:44rem; }
+  .qbar-row{ display:grid; grid-template-columns:3.2rem 1fr 6.4rem; align-items:center; gap:0.9rem; }
+  .qbar-row .qlabel{ font-weight:600; font-size:0.92rem; }
+  .qbar-track{ height:10px; background:var(--track); border-radius:6px; overflow:hidden; }
+  .qbar-fill{ height:100%; background:var(--accent); border-radius:6px; }
+  .qbar-row .qval{ text-align:right; font-size:0.92rem; color:var(--ink-soft); }
+
+  .grid-2{ display:grid; grid-template-columns:repeat(2,1fr); gap:1.6rem; }
+  .grid-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; }
+
+  .comp-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:1.5rem 1.6rem;
+    box-shadow:var(--shadow);
+  }
+  section.alt .comp-card{ background:var(--surface); }
+  .comp-card .amount{ font-size:1.9rem; font-weight:700; }
+  .comp-card .cond{ color:var(--ink-soft); font-size:0.92rem; margin-top:0.5rem; }
+
+  .fixed-stack{ display:flex; flex-direction:column; gap:0.9rem; max-width:34rem; }
+  .fixed-row{
+    display:grid;
+    grid-template-columns:1fr 6.5rem;
+    align-items:center;
+    gap:1rem;
+    padding:1rem 1.2rem;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:8px;
+  }
+  .fixed-row.total{
+    background:var(--accent-soft);
+    border-color:var(--accent);
+  }
+  .fixed-row .ftitle{ font-weight:600; font-size:0.98rem; }
+  .fixed-row .fcond{ font-size:0.85rem; color:var(--ink-soft); margin-top:0.2rem; }
+  .fixed-row .famt{ text-align:right; font-weight:700; font-size:1.15rem; }
+  .fixed-row.total .famt{ color:var(--accent-ink); font-size:1.3rem; }
+  .plus-sign{ text-align:center; color:var(--ink-faint); font-size:1.2rem; margin:-0.15rem 0; }
+
+  .benefit-row{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; margin-top:2rem; }
+  .benefit{
+    display:flex;
+    flex-direction:column;
+    gap:0.8rem;
+    padding:1.4rem;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+  }
+  .benefit svg{ width:26px; height:26px; stroke:var(--accent); }
+  .benefit .btitle{ font-weight:600; }
+  .benefit .bdesc{ font-size:0.88rem; color:var(--ink-soft); }
+
+  table{ width:100%; border-collapse:collapse; font-size:0.94rem; }
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+  th, td{ padding:0.85rem 1.1rem; text-align:left; border-bottom:1px solid var(--line); }
+  thead th{ font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-faint); font-weight:600; }
+  tbody tr:last-child td{ border-bottom:none; }
+  td.rate{ font-weight:700; text-align:right; }
+  tr.capped td.rate{ color:var(--accent-ink); }
+  .cap-badge{
+    display:inline-block;
+    margin-left:0.5rem;
+    font-size:0.66rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:0.1rem 0.4rem;
+    font-family:-apple-system,sans-serif;
+  }
+
+  .example-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:1.8rem; }
+  .ex-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:1.3rem 1.4rem;
+    display:flex;
+    flex-direction:column;
+    gap:0.55rem;
+  }
+  .ex-card.capped{ border-color:var(--accent); }
+  .ex-card .exlabel{ font-weight:600; font-size:0.92rem; }
+  .ex-card .exrow{ display:flex; justify-content:space-between; gap:0.6rem; font-size:0.83rem; color:var(--ink-soft); }
+  .ex-card .exrow strong{ color:var(--ink); font-weight:600; }
+  .ex-card .exresult{
+    margin-top:0.35rem;
+    padding-top:0.6rem;
+    border-top:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+  }
+  .ex-card .exresult .rlabel{ font-size:0.78rem; color:var(--ink-faint); }
+  .ex-card .exresult .rval{ font-size:1.3rem; font-weight:700; color:var(--accent-ink); }
+  .ex-caption{ font-size:0.82rem; color:var(--ink-faint); margin-top:1rem; max-width:46rem; }
+
+  .quarter-detail{ margin-top:2.6rem; }
+  .quarter-detail h3{
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    font-size:1.15rem;
+    font-weight:600;
+    margin:0 0 0.3rem;
+  }
+  .quarter-detail .qd-sub{ font-size:0.88rem; color:var(--ink-soft); margin:0 0 1.2rem; max-width:44rem; }
+  tfoot td{
+    font-weight:700;
+    background:var(--surface-alt);
+    border-top:2px solid var(--line);
+    border-bottom:none;
+  }
+  td.tot{ text-align:right; }
+
+  .cashrule{
+    display:flex;
+    gap:1.4rem;
+    align-items:flex-start;
+    max-width:46rem;
+    padding:1.4rem 1.6rem;
+    background:var(--surface);
+    border:1px solid var(--accent);
+    border-radius:10px;
+  }
+  .cashrule svg{ width:28px; height:28px; stroke:var(--accent); flex:none; margin-top:0.15rem; }
+  .cashrule .ctitle{ font-weight:700; margin-bottom:0.3rem; }
+  .cashrule p{ margin:0; color:var(--ink-soft); font-size:0.94rem; }
+
+  .flow-example{ margin-top:1.8rem; display:flex; align-items:center; gap:0.9rem; flex-wrap:wrap; font-size:0.9rem; color:var(--ink-soft); }
+  .flow-example .chip{
+    background:var(--surface-alt);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:0.4rem 0.7rem;
+    font-weight:600;
+    color:var(--ink);
+  }
+  .flow-example .arrow{ color:var(--ink-faint); }
+
+  .stat-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:1.6rem;
+    display:flex;
+    flex-direction:column;
+    gap:0.7rem;
+  }
+  .stat-card .satt{ font-size:0.82rem; color:var(--ink-soft); font-weight:600; }
+  .stat-card .stotal{ font-size:1.7rem; font-weight:700; }
+  .stat-card .smonth{ font-size:0.85rem; color:var(--ink-faint); }
+  .stat-card .sbar{ height:8px; border-radius:5px; background:var(--track); overflow:hidden; margin-top:0.3rem; }
+  .stat-card .sbar i{ display:block; height:100%; background:var(--accent); border-radius:5px; }
+  .stat-card.hi{ border-color:var(--accent); }
+
+  .closing{ text-align:left; }
+  .closing ul{ margin:1.6rem 0 0; padding:0; list-style:none; display:flex; flex-direction:column; gap:0.8rem; max-width:38rem; }
+  .closing li{ display:flex; gap:0.7rem; font-size:0.98rem; }
+  .closing li::before{ content:"—"; color:var(--accent); font-weight:700; flex:none; }
+
+  footer.pagefoot{
+    padding:1.6rem clamp(1.6rem,4vw,4rem) 3rem;
+    color:var(--ink-faint);
+    font-size:0.8rem;
+    max-width:56rem;
+  }
+
+  @media (max-width: 860px){
+    .shell{ grid-template-columns:1fr; }
+    nav.rail{
+      position:sticky; top:0; height:auto;
+      flex-direction:row; align-items:center;
+      overflow-x:auto; white-space:nowrap;
+      border-right:none; border-bottom:1px solid var(--line);
+      background:var(--bg);
+      padding:0.9rem 1.2rem;
+      gap:1rem;
+      z-index:5;
+    }
+    nav.rail .brand{ display:none; }
+    nav.rail ol{ flex-direction:row; gap:0.2rem; }
+    .grid-2, .grid-3, .benefit-row, .example-grid{ grid-template-columns:1fr; }
+  }
+</style>
+
+<div class="shell">
+  <nav class="rail" aria-label="Seções da proposta">
+    <div class="brand">MAIS Soluções Industriais<small>Proposta de Remuneração</small></div>
+    <ol>
+      <li><a href="#capa">Capa</a></li>
+      <li><a href="#oportunidade">A Oportunidade</a></li>
+      <li><a href="#fixo">Remuneração Fixa</a></li>
+      <li><a href="#atividade">Bônus por Atividade</a></li>
+      <li><a href="#beneficios">Benefícios</a></li>
+      <li><a href="#comissao">Comissão</a></li>
+      <li><a href="#margem">Trava de Margem</a></li>
+      <li><a href="#bonus">Bônus por Meta</a></li>
+      <li><a href="#pagamento">Regra de Pagamento</a></li>
+      <li><a href="#direta">Venda Direta de Fornecedor</a></li>
+      <li><a href="#potencial">Potencial de Ganho</a></li>
+      <li><a href="#proximos">Próximos Passos</a></li>
+    </ol>
+  </nav>
+
+  <main>
+
+    <section id="capa">
+      <p class="eyebrow">MAIS Soluções Industriais · Filial ES</p>
+      <h1 class="hero display">Proposta de Remuneração<br>Consultor de Vendas Externas</h1>
+      <p class="hero-sub">Uma posição estratégica para o crescimento comercial da filial ES, com remuneração composta por fixo, benefícios e variável sem teto de comissão base.</p>
+      <div class="cover-meta">
+        <div><span class="label">Território</span><span class="val">Espírito Santo</span></div>
+        <div><span class="label">Ciclo de vigência</span><span class="val">Ano-base 2027</span></div>
+        <div><span class="label">Meta anual individual · editável</span><span class="val num" style="display:flex;align-items:baseline;gap:0.25rem;">R$&nbsp;<input type="number" id="metaInput" value="6000000" min="0" step="50000" aria-label="Meta anual individual em reais"></span></div>
+        <div><span class="label">Revisão</span><span class="val">Rev. 07 · 03/09/2026</span></div>
+      </div>
+    </section>
+
+    <section id="oportunidade" class="alt">
+      <p class="eyebrow">01 — A Oportunidade</p>
+      <h2>Sua meta comercial para 2027</h2>
+      <p class="lead">A meta é distribuída por trimestre, respeitando a sazonalidade do ciclo de compra dos nossos clientes industriais — mais concentrada no meio do ano.</p>
+      <div class="big-number num"><span id="bigNumberVal">R$ 6.000.000</span><span class="big-number-cap">/ano</span></div>
+      <div class="quarter-bars">
+        <div class="qbar-row"><span class="qlabel">Q1</span><span class="qbar-track"><span class="qbar-fill" style="width:15%"></span></span><span class="qval num" id="q1val">R$ 900.000</span></div>
+        <div class="qbar-row"><span class="qlabel">Q2</span><span class="qbar-track"><span class="qbar-fill" style="width:30%"></span></span><span class="qval num" id="q2val">R$ 1.800.000</span></div>
+        <div class="qbar-row"><span class="qlabel">Q3</span><span class="qbar-track"><span class="qbar-fill" style="width:40%"></span></span><span class="qval num" id="q3val">R$ 2.400.000</span></div>
+        <div class="qbar-row"><span class="qlabel">Q4</span><span class="qbar-track"><span class="qbar-fill" style="width:15%"></span></span><span class="qval num" id="q4val">R$ 900.000</span></div>
+      </div>
+    </section>
+
+    <section id="fixo">
+      <p class="eyebrow">02 — Remuneração Fixa</p>
+      <h2>Fixo mensal de R$ 5.000</h2>
+      <p class="lead">Um piso garantido, pago integralmente todo mês, independente de atividade comercial do período.</p>
+      <div class="fixed-stack">
+        <div class="fixed-row total">
+          <div><div class="ftitle">Piso garantido</div><div class="fcond">Pago integralmente, todo mês, sem condicionantes</div></div>
+          <div class="famt num">R$ 5.000</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="atividade" class="alt">
+      <p class="eyebrow">03 — Bônus por Atividade</p>
+      <h2>R$ 1.000 + R$ 1.000 por mês, pagos a cada trimestre</h2>
+      <p class="lead">Dois componentes ligados à disciplina comercial da posição. O valor de referência continua mensal — o que muda é a liquidação: os 3 meses do trimestre são somados e pagos de uma vez, no fechamento do período.</p>
+      <div class="fixed-stack">
+        <div class="fixed-row">
+          <div><div class="ftitle">Componente de visitas</div><div class="fcond">20 visitas a clientes/mês · referência R$ 1.000/mês</div></div>
+          <div class="famt num">R$ 3.000</div>
+        </div>
+        <div class="plus-sign">+</div>
+        <div class="fixed-row">
+          <div><div class="ftitle">Componente de oportunidades</div><div class="fcond">10 oportunidades qualificadas registradas/mês · referência R$ 1.000/mês</div></div>
+          <div class="famt num">R$ 3.000</div>
+        </div>
+        <div class="plus-sign">=</div>
+        <div class="fixed-row total">
+          <div><div class="ftitle">Bônus de atividade por trimestre</div><div class="fcond">Condicionado ao cumprimento das duas metas nos 3 meses do trimestre</div></div>
+          <div class="famt num">R$ 6.000</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios">
+      <p class="eyebrow">04 — Benefícios</p>
+      <h2>Estrutura para você trabalhar em campo</h2>
+      <div class="benefit-row">
+        <div class="benefit">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6 17a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm16 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM3 17V11l2-5h11l3 5v6M5 11h13"/></svg>
+          <div class="btitle">Carro</div>
+          <div class="bdesc">Veículo da frota para atendimento aos clientes do território.</div>
+        </div>
+        <div class="benefit">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+          <div class="btitle">Celular corporativo</div>
+          <div class="bdesc">Aparelho e linha para contato contínuo com clientes e CRM.</div>
+        </div>
+        <div class="benefit">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M2 19h20"/></svg>
+          <div class="btitle">Notebook</div>
+          <div class="bdesc">Equipamento para propostas, apresentações e gestão do pipeline.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="comissao" class="alt">
+      <p class="eyebrow">05 — Comissão</p>
+      <h2>1,75% sobre vendas recebidas, todo mês</h2>
+      <p class="lead">A comissão base é calculada sobre o valor recebido no mês, até o limite da meta do trimestre, e paga mensalmente — não depende de bater a meta para cair na conta. O que supera a meta segue a tabela de aceleração (seção 07), que incide só sobre o excedente, nunca sobre o valor total.</p>
+      <div class="grid-2" style="max-width:44rem;">
+        <div class="comp-card">
+          <div class="cond">Taxa base</div>
+          <div class="amount num">1,75%</div>
+          <div class="cond">Sobre o valor recebido no mês</div>
+        </div>
+        <div class="comp-card">
+          <div class="cond">Frequência de pagamento</div>
+          <div class="amount">Mensal</div>
+          <div class="cond">Sem trava por atingimento de meta</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="margem">
+      <p class="eyebrow">06 — Trava de Margem Mínima</p>
+      <h2>Comissão condicionada à margem da venda</h2>
+      <p class="lead">A taxa de 1,75% — e toda a tabela de superação de meta — pressupõe margem mínima de 20% na venda. Abaixo disso, a comissão daquela venda passa a ser um valor fixo reduzido, fora da lógica de faixas de superação. A trava vale só para a comissão (base + bônus de meta); não afeta o fixo nem o bônus de atividade.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Margem da venda</th><th style="text-align:right;">Comissão aplicável</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>20% ou mais</td><td class="rate num">Tabela normal (1,75% a 2,50%)</td></tr>
+            <tr><td>De 15% a 20%</td><td class="rate num">1,25% flat</td></tr>
+            <tr class="capped"><td>Abaixo de 15%<span class="cap-badge">Piso</span></td><td class="rate num">0,75% flat</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="bonus" class="alt">
+      <p class="eyebrow">07 — Bônus por Superação de Meta</p>
+      <h2>Quanto mais você extrapola a meta, maior a taxa — só sobre o excedente</h2>
+      <p class="lead">Apurado ao final de cada trimestre, comparando o total recebido no período com a meta daquele trimestre. Cada taxa da tabela abaixo incide <strong>só sobre o trecho da receita que cai naquela faixa</strong> — a comissão base de 1,75% sobre a meta (seção 05) não muda. Pago uma única vez, no fechamento do trimestre, somado à comissão base do período.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Trecho da receita</th><th style="text-align:right;">Taxa sobre esse trecho</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Até 100% da meta<span class="cap-badge">Base</span></td><td class="rate num">1,75%</td></tr>
+            <tr><td>Excedente de 100% a 120%</td><td class="rate num">2,00%</td></tr>
+            <tr><td>Excedente de 120% a 140%</td><td class="rate num">2,25%</td></tr>
+            <tr class="capped"><td>Excedente acima de 140%<span class="cap-badge">Teto</span></td><td class="rate num">2,50%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="example-grid">
+        <div class="ex-card">
+          <div class="exlabel">Excedente de 100% a 120% da meta</div>
+          <div class="exrow"><span>Excedente nessa faixa</span><strong class="num" id="ex1exc">R$ 1.200.000</strong></div>
+          <div class="exrow"><span>Taxa aplicada</span><strong class="num">2,00%</strong></div>
+          <div class="exresult"><span class="rlabel">Bônus da faixa</span><span class="rval num" id="ex1bonus">R$ 24.000</span></div>
+        </div>
+        <div class="ex-card">
+          <div class="exlabel">Excedente de 120% a 140% da meta</div>
+          <div class="exrow"><span>Excedente nessa faixa</span><strong class="num" id="ex2exc">R$ 1.200.000</strong></div>
+          <div class="exrow"><span>Taxa aplicada</span><strong class="num">2,25%</strong></div>
+          <div class="exresult"><span class="rlabel">Bônus da faixa</span><span class="rval num" id="ex2bonus">R$ 27.000</span></div>
+        </div>
+        <div class="ex-card capped">
+          <div class="exlabel">Cada 20 p.p. acima de 140% da meta<span class="cap-badge">Teto</span></div>
+          <div class="exrow"><span>Excedente por fatia de 20 p.p.</span><strong class="num" id="ex3exc">R$ 1.200.000</strong></div>
+          <div class="exrow"><span>Taxa aplicada</span><strong class="num">2,50%</strong></div>
+          <div class="exresult"><span class="rlabel">Bônus por fatia</span><span class="rval num" id="ex3bonus">R$ 30.000</span></div>
+        </div>
+      </div>
+      <p class="ex-caption">Exemplos calculados sobre a meta total anual (<span id="capMeta">R$ 6.000.000</span>), com cada faixa representando 20 pontos percentuais de superação (<span id="capBand">R$ 1.200.000</span>). A faixa acima de 140% não tem limite de valor — a taxa de 2,50% vale para todo o excedente a partir daí, não só para uma fatia de 20 p.p.; o card acima mostra o bônus de uma única fatia de referência para comparar com as outras faixas, mas quem superar por mais de 20 p.p. além de 140% ganha 2,50% sobre cada fatia adicional (os cenários da seção 09 já somam isso sem limite). Na prática, a apuração é feita a cada trimestre, sobre a meta daquele período — mas a lógica e as taxas são exatamente as mesmas.</p>
+    </section>
+
+    <section id="pagamento">
+      <p class="eyebrow">08 — Regra de Pagamento</p>
+      <h2>Comissão e bônus seguem o recebimento do cliente</h2>
+      <div class="cashrule">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <div>
+          <div class="ctitle">O pagamento depende do caixa, não da venda</div>
+          <p>A comissão mensal e os dois bônus trimestrais — atividade e superação de meta — são calculados sobre o valor que a MAIS efetivamente recebeu do cliente, não sobre a data em que a venda foi fechada ou a nota fiscal emitida.</p>
+        </div>
+      </div>
+      <div class="flow-example">
+        <span class="chip">Venda fechada em Set/27</span>
+        <span class="arrow">→</span>
+        <span class="chip">Cliente paga em Out/27</span>
+        <span class="arrow">→</span>
+        <span class="chip">Conta para a meta do Q4</span>
+      </div>
+    </section>
+
+    <section id="direta" class="alt">
+      <p class="eyebrow">09 — Venda Direta de Fornecedor</p>
+      <h2>Trabalho comprovado conta, mesmo quando o fornecedor fecha direto</h2>
+      <p class="lead">Às vezes o fornecedor fecha a venda direto com o cliente, sem passar pela nota da Mais. Isso não pode zerar o trabalho do consultor — desde que o esforço comercial seja comprovável.</p>
+      <div class="grid-2" style="max-width:44rem;">
+        <div class="comp-card">
+          <div class="cond">Comprovação exigida</div>
+          <div class="amount" style="font-size:1.1rem; line-height:1.3;">Visita registrada e/ou OP cadastrada</div>
+          <div class="cond">Relacionada ao fornecedor/produto da venda, registrada antes do fechamento direto — ou seja, trabalho efetivo, não uma alegação depois do fato</div>
+        </div>
+        <div class="comp-card">
+          <div class="cond">Tratamento</div>
+          <div class="amount num">1,75%</div>
+          <div class="cond">Comissão base sobre o valor da venda direta, e o valor conta 100% para a meta do trimestre (inclusive para disparar a tabela de aceleração da seção 07)</div>
+        </div>
+      </div>
+      <p class="ex-caption">Regra proposta para fechar o desenho — o mecanismo de pagamento (a Mais recebe algo do fornecedor nessas operações? é um acordo à parte?) depende de como cada fornecedor trata essas vendas diretas. Confirmar o fluxo financeiro antes de formalizar esta seção.</p>
+    </section>
+
+    <section id="potencial">
+      <p class="eyebrow">10 — Potencial de Ganho</p>
+      <h2>Projeção anual (fixo + variável)</h2>
+      <p class="lead">Três cenários de desempenho, considerando o mesmo nível de superação em todos os trimestres do ano e margem de venda de 20% ou mais (ver seção 06 — abaixo disso a comissão cai para os valores fixos reduzidos, não para esta tabela).</p>
+      <div class="grid-3">
+        <div class="stat-card">
+          <div class="satt">Atingindo 100% da meta</div>
+          <div class="stotal num" id="stat1total">R$ 189.000</div>
+          <div class="smonth num" id="stat1month">≈ R$ 15.750/mês</div>
+          <div class="sbar"><i id="stat1bar" style="width:63%"></i></div>
+        </div>
+        <div class="stat-card">
+          <div class="satt">Superando em 30%</div>
+          <div class="stotal num" id="stat2total">R$ 226.500</div>
+          <div class="smonth num" id="stat2month">≈ R$ 18.875/mês</div>
+          <div class="sbar"><i id="stat2bar" style="width:75%"></i></div>
+        </div>
+        <div class="stat-card hi">
+          <div class="satt">Superando em 80%</div>
+          <div class="stotal num" id="stat3total">R$ 300.000</div>
+          <div class="smonth num" id="stat3month">≈ R$ 25.000/mês</div>
+          <div class="sbar"><i id="stat3bar" style="width:100%"></i></div>
+        </div>
+      </div>
+
+      <div class="quarter-detail">
+        <h3>Detalhamento por trimestre — cenário de 40% acima da meta</h3>
+        <p class="qd-sub">Considerando 140% de atingimento em todos os trimestres, cumprimento integral do fixo (R$ 5.000/mês) e do bônus de atividade (20 visitas + 10 oportunidades qualificadas por mês, pago no fechamento do trimestre).</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Trimestre</th>
+                <th style="text-align:right;">Meta</th>
+                <th style="text-align:right;">Fixo</th>
+                <th style="text-align:right;">Bônus atividade</th>
+                <th style="text-align:right;">Comissão base</th>
+                <th style="text-align:right;">Bônus meta</th>
+                <th style="text-align:right;">Comissão total</th>
+                <th style="text-align:right;">Total do trimestre</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Q1</td>
+                <td class="tot num" id="q1meta">R$ 900.000</td>
+                <td class="tot num">R$ 15.000</td>
+                <td class="tot num">R$ 6.000</td>
+                <td class="tot num" id="q1combase">R$ 15.750</td>
+                <td class="tot num" id="q1bonusmeta">R$ 7.650</td>
+                <td class="tot num" id="q1comtotal">R$ 23.400</td>
+                <td class="tot num"><strong id="q1total">R$ 44.400</strong></td>
+              </tr>
+              <tr>
+                <td>Q2</td>
+                <td class="tot num" id="q2meta">R$ 1.800.000</td>
+                <td class="tot num">R$ 15.000</td>
+                <td class="tot num">R$ 6.000</td>
+                <td class="tot num" id="q2combase">R$ 31.500</td>
+                <td class="tot num" id="q2bonusmeta">R$ 15.300</td>
+                <td class="tot num" id="q2comtotal">R$ 46.800</td>
+                <td class="tot num"><strong id="q2total">R$ 67.800</strong></td>
+              </tr>
+              <tr>
+                <td>Q3</td>
+                <td class="tot num" id="q3meta">R$ 2.400.000</td>
+                <td class="tot num">R$ 15.000</td>
+                <td class="tot num">R$ 6.000</td>
+                <td class="tot num" id="q3combase">R$ 42.000</td>
+                <td class="tot num" id="q3bonusmeta">R$ 20.400</td>
+                <td class="tot num" id="q3comtotal">R$ 62.400</td>
+                <td class="tot num"><strong id="q3total">R$ 83.400</strong></td>
+              </tr>
+              <tr>
+                <td>Q4</td>
+                <td class="tot num" id="q4meta">R$ 900.000</td>
+                <td class="tot num">R$ 15.000</td>
+                <td class="tot num">R$ 6.000</td>
+                <td class="tot num" id="q4combase">R$ 15.750</td>
+                <td class="tot num" id="q4bonusmeta">R$ 7.650</td>
+                <td class="tot num" id="q4comtotal">R$ 23.400</td>
+                <td class="tot num"><strong id="q4total">R$ 44.400</strong></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Total ano</td>
+                <td class="tot num" id="totmeta">R$ 6.000.000</td>
+                <td class="tot num">R$ 60.000</td>
+                <td class="tot num">R$ 24.000</td>
+                <td class="tot num" id="totcombase">R$ 105.000</td>
+                <td class="tot num" id="totbonusmeta">R$ 51.000</td>
+                <td class="tot num" id="totcomtotal">R$ 156.000</td>
+                <td class="tot num" id="tottotal">R$ 240.000</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="proximos" class="closing alt">
+      <p class="eyebrow">11 — Próximos Passos</p>
+      <h2>O que vem a seguir</h2>
+      <ul>
+        <li>Alinhamento final da proposta e formalização por escrito.</li>
+        <li>Definição da data de início e período de ambientação.</li>
+        <li>Apresentação das carteiras de clientes e ferramentas de trabalho (CRM, frota, equipamentos).</li>
+      </ul>
+    </section>
+
+    <footer class="pagefoot">MAIS Soluções Industriais S/A · Filial ES · Proposta de remuneração — documento interno para avaliação, sujeito a ajustes antes da formalização.<br><br><strong>Rev. 02 (03/09/2026):</strong> meta ajustada de R$ 8.250.000 para R$ 6.000.000; comissão base de 1,25% para 1,75% (tabela de superação ajustada na mesma proporção); os componentes de visitas e oportunidades (R$ 1.000 + R$ 1.000, referência mensal) deixam de compor o fixo mensal e passam a ser bônus de atividade liquidado por trimestre.<br><br><strong>Rev. 03 (03/09/2026):</strong> adicionada a trava de margem mínima (seção 06) — comissão de 1,75% a 2,50% vale só para vendas com margem ≥20%; entre 15% e 20% de margem a comissão cai para 1,25% flat; abaixo de 15% cai para 0,75% flat. As projeções da seção 09 (Potencial de Ganho) assumem margem ≥20% em todas as vendas.<br><br><strong>Rev. 04 (03/09/2026):</strong> corrigido o rótulo do card "acima de 140%" na seção 07 — ele mostra o bônus de uma fatia de referência de 20 p.p. (R$30.000), não um teto de valor; a taxa de 2,50% vale sem limite para todo o excedente acima de 140%, como já estava correto nos cenários da seção 09.<br><br><strong>Rev. 05 (03/09/2026):</strong> reescritos os rótulos e a tabela da seção 07 — a taxa de cada faixa incide só sobre o trecho da receita que cai nela, nunca sobre o valor total recebido; a comissão base de 1,75% (seção 05) sempre incide sobre a meta, não sobre o recebido total. Os valores em R$ de todas as tabelas não mudaram nesta revisão — já estavam calculados dessa forma; o ajuste foi só de clareza, para a tabela não parecer uma taxa única por faixa de atingimento.<br><br><strong>Rev. 06 (03/09/2026):</strong> adicionada a seção 09 (Venda Direta de Fornecedor) — quando o fornecedor fecha a venda direto com o cliente, o valor ainda conta para o consultor se houver trabalho comercial comprovado (visita registrada e/ou OP cadastrada antes do fechamento): comissão base de 1,75% sobre o valor + conta 100% para a meta do trimestre. O mecanismo de pagamento nesses casos depende de como cada fornecedor trata a operação — regra proposta, pendente de confirmação antes de formalizar.<br><br><strong>Rev. 07 (03/09/2026):</strong> o campo "Meta anual individual" na capa agora é editável — mudar o valor recalcula automaticamente todas as tabelas e cards do documento (metas trimestrais, comissão base, bônus de superação, os 3 cenários da seção 09 e o detalhamento por trimestre). Nenhuma fórmula mudou nesta revisão, só ficou dinâmica.</footer>
+  </main>
+</div>
+
+<script>
+(function(){
+  const RATE_BASE=0.0175, RATE_T1=0.02, RATE_T2=0.0225, RATE_TETO=0.025;
+  const FIXO_MES=5000, ATIV_MES=2000; // 1000 (visitas) + 1000 (oportunidades)
+  const QSPLIT=[0.15,0.30,0.40,0.15];
+
+  function fmtBRL(n){
+    const r = Math.round(n*100)/100;
+    const opts = Number.isInteger(r) ? {maximumFractionDigits:0} : {minimumFractionDigits:2,maximumFractionDigits:2};
+    return 'R$ ' + r.toLocaleString('pt-BR', opts);
+  }
+  function set(id, text){ const el=document.getElementById(id); if(el) el.textContent = text; }
+  function setWidth(id, pct){ const el=document.getElementById(id); if(el) el.style.width = Math.max(0,Math.min(100,pct)) + '%'; }
+
+  // taxa de cada faixa incide só sobre o trecho do excedente que cai nela (seção 07)
+  function bonusFromExcess(excessValue, bandValue){
+    let remaining = excessValue, bonus = 0;
+    for(const r of [RATE_T1, RATE_T2]){
+      if(remaining<=0) break;
+      const take = Math.min(remaining, bandValue);
+      bonus += take*r;
+      remaining -= take;
+    }
+    if(remaining>0) bonus += remaining*RATE_TETO; // excedente acima de 140%, sem limite
+    return bonus;
+  }
+
+  function recalcAll(meta){
+    if(!isFinite(meta) || meta<0) meta=0;
+
+    set('bigNumberVal', fmtBRL(meta));
+    const qmeta = QSPLIT.map(p=>p*meta);
+    set('q1val', fmtBRL(qmeta[0]));
+    set('q2val', fmtBRL(qmeta[1]));
+    set('q3val', fmtBRL(qmeta[2]));
+    set('q4val', fmtBRL(qmeta[3]));
+
+    const band = 0.20*meta; // 20 p.p. da meta anual, referência dos cards da seção 07
+    set('ex1exc', fmtBRL(band)); set('ex1bonus', fmtBRL(band*RATE_T1));
+    set('ex2exc', fmtBRL(band)); set('ex2bonus', fmtBRL(band*RATE_T2));
+    set('ex3exc', fmtBRL(band)); set('ex3bonus', fmtBRL(band*RATE_TETO));
+    set('capMeta', fmtBRL(meta));
+    set('capBand', fmtBRL(band));
+
+    // seção 09 — tabela trimestral, cenário de 140% de atingimento em todos os trimestres
+    const FIXO_TRI = FIXO_MES*3, ATIV_TRI = ATIV_MES*3;
+    let totMeta=0, totCombase=0, totBonusmeta=0, totComtotal=0, totTotal=0;
+    ['q1','q2','q3','q4'].forEach((id,i)=>{
+      const m = qmeta[i];
+      const combase = RATE_BASE*m; // base sempre sobre a meta do trimestre
+      const qband = 0.20*m;
+      const bonusmeta = qband*RATE_T1 + qband*RATE_T2; // 140% = as duas faixas cheias
+      const comtotal = combase+bonusmeta;
+      const total = FIXO_TRI+ATIV_TRI+comtotal;
+      set(id+'meta', fmtBRL(m));
+      set(id+'combase', fmtBRL(combase));
+      set(id+'bonusmeta', fmtBRL(bonusmeta));
+      set(id+'comtotal', fmtBRL(comtotal));
+      set(id+'total', fmtBRL(total));
+      totMeta+=m; totCombase+=combase; totBonusmeta+=bonusmeta; totComtotal+=comtotal; totTotal+=total;
+    });
+    set('totmeta', fmtBRL(totMeta));
+    set('totcombase', fmtBRL(totCombase));
+    set('totbonusmeta', fmtBRL(totBonusmeta));
+    set('totcomtotal', fmtBRL(totComtotal));
+    set('tottotal', fmtBRL(totTotal));
+
+    // seção 09 — 3 cenários anuais (100% / +30% / +80%), sem limite acima de 140%
+    const fixoAno=FIXO_MES*12, ativAno=ATIV_MES*12, combaseAno=RATE_BASE*meta;
+    const cenarios = [0, 0.30, 0.80].map(pctOver=>{
+      const bonus = bonusFromExcess(pctOver*meta, band);
+      const total = fixoAno+ativAno+combaseAno+bonus;
+      return { total, month: total/12 };
+    });
+    const maxTotal = Math.max(...cenarios.map(c=>c.total), 1);
+    cenarios.forEach((c,i)=>{
+      const n=i+1;
+      set('stat'+n+'total', fmtBRL(c.total));
+      set('stat'+n+'month', '≈ ' + fmtBRL(c.month) + '/mês');
+      setWidth('stat'+n+'bar', c.total/maxTotal*100);
+    });
+  }
+
+  const input = document.getElementById('metaInput');
+  if(input){
+    input.addEventListener('input', ()=>recalcAll(Number(input.value)));
+    recalcAll(Number(input.value));
+  }
+})();
+</script>
