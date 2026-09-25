@@ -396,6 +396,7 @@
       <li><a href="#oportunidade">A Oportunidade</a></li>
       <li><a href="#fixo">Remuneração Fixa</a></li>
       <li><a href="#atividade">Bônus por Atividade</a></li>
+      <li><a href="#garantia">Garantia 6 Meses</a></li>
       <li><a href="#beneficios">Benefícios</a></li>
       <li><a href="#comissao">Comissão</a></li>
       <li><a href="#margem">Trava de Margem</a></li>
@@ -403,6 +404,7 @@
       <li><a href="#pagamento">Regra de Pagamento</a></li>
       <li><a href="#parceiros">Vendas Diretas de Parceiros</a></li>
       <li><a href="#potencial">Potencial de Ganho</a></li>
+      <li><a href="#liquido">Comparação: Líquido</a></li>
       <li><a href="#proximos">Próximos Passos</a></li>
     </ol>
   </nav>
@@ -417,7 +419,7 @@
         <div><span class="label">Território</span><span class="val">Espírito Santo</span></div>
         <div><span class="label">Ciclo de vigência</span><span class="val">Ano-base 2027</span></div>
         <div><span class="label">Meta anual individual · editável</span><span class="val num" style="display:flex;align-items:baseline;gap:0.25rem;">R$&nbsp;<input type="number" id="metaInput" value="6000000" min="0" step="50000" aria-label="Meta anual individual em reais"></span></div>
-        <div><span class="label">Revisão</span><span class="val">Rev. 09 · 25/09/2026</span></div>
+        <div><span class="label">Revisão</span><span class="val">Rev. 10 · 25/09/2026</span></div>
       </div>
     </section>
 
@@ -468,8 +470,44 @@
       </div>
     </section>
 
-    <section id="beneficios">
-      <p class="eyebrow">04 — Benefícios</p>
+    <section id="garantia">
+      <p class="eyebrow">04 — Garantia dos Primeiros 6 Meses</p>
+      <h2>R$ 10.000/mês garantidos enquanto a carteira não maturou</h2>
+      <p class="lead">Nos primeiros 6 meses de contrato, a renda mensal é garantida em R$10.000 — pra não deixar o início pesar no bolso enquanto clientes e produtos ainda estão sendo mapeados.</p>
+      <div class="fixed-stack">
+        <div class="fixed-row">
+          <div><div class="ftitle">Fixo</div><div class="fcond">R$5.000/mês, em carteira (CLT) — igual ao padrão da seção 02</div></div>
+          <div class="famt num">R$ 5.000</div>
+        </div>
+        <div class="plus-sign">+</div>
+        <div class="fixed-row">
+          <div><div class="ftitle">Bônus de atividade — garantido</div><div class="fcond">R$2.000/mês via cartão de benefícios, sem depender de bater visitas/oportunidades nesse período (diferente da regra padrão da seção 03)</div></div>
+          <div class="famt num">R$ 2.000</div>
+        </div>
+        <div class="plus-sign">+</div>
+        <div class="fixed-row">
+          <div><div class="ftitle">Antecipação de comissão</div><div class="fcond">R$3.000/mês via cartão de benefícios, adiantado sobre a comissão que a carteira vai gerar</div></div>
+          <div class="famt num">R$ 3.000</div>
+        </div>
+        <div class="plus-sign">=</div>
+        <div class="fixed-row total">
+          <div><div class="ftitle">Renda mensal garantida</div><div class="fcond">Meses 1 a 6 de contrato</div></div>
+          <div class="famt num">R$ 10.000</div>
+        </div>
+      </div>
+
+      <div class="cashrule">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <div>
+          <div class="ctitle">O que zera a antecipação de R$ 3.000</div>
+          <p>Os R$3.000/mês são um adiantamento sobre a comissão real, não um bônus extra. Pela taxa de entrada (1,75% — seção 06), a antecipação do mês é totalmente coberta quando o valor recebido de clientes naquele mês chega a aproximadamente <strong>R$ 171.429</strong> (R$3.000 ÷ 1,75%). Comissão gerada acima disso é paga normalmente, por cima do adiantamento; abaixo disso, a diferença vira saldo a compensar com comissão futura — a garantia de R$10.000/mês nunca é reduzida por causa desse saldo.</p>
+        </div>
+      </div>
+      <p class="ex-caption">Válido só para os 6 primeiros meses de contrato. A partir do 7º mês, vale a estrutura padrão: fixo da seção 02, bônus de atividade condicionado e trimestral da seção 03, e comissão das seções 06 a 08.</p>
+    </section>
+
+    <section id="beneficios" class="alt">
+      <p class="eyebrow">05 — Benefícios</p>
       <h2>Estrutura para você trabalhar em campo</h2>
       <div class="benefit-row">
         <div class="benefit">
@@ -490,15 +528,15 @@
       </div>
     </section>
 
-    <section id="comissao" class="alt">
-      <p class="eyebrow">05 — Comissão</p>
+    <section id="comissao">
+      <p class="eyebrow">06 — Comissão</p>
       <h2>1,75% sobre vendas recebidas, todo mês</h2>
-      <p class="lead">A comissão base é calculada sobre o valor recebido no mês, até o limite da meta do trimestre, e paga mensalmente — não depende de bater a meta para cair na conta. O que supera a meta segue a tabela de aceleração (seção 07), que incide só sobre o excedente, nunca sobre o valor total.</p>
+      <p class="lead">A comissão base é calculada sobre o valor recebido no mês, até o limite da meta do trimestre, e paga mensalmente — não depende de bater a meta para cair na conta. O que supera a meta segue a tabela de aceleração (seção 08), que incide só sobre o excedente, nunca sobre o valor total.</p>
       <div class="cashrule" style="margin-bottom:1.6rem;">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/></svg>
         <div>
           <div class="ctitle">Toda taxa desta e da próxima seção pressupõe margem ≥20% na venda</div>
-          <p>1,75% base e a tabela de aceleração (seção 07) só valem para vendas com margem de 20% ou mais. Abaixo disso, a comissão daquela venda cai para um valor fixo reduzido — ver seção 06, Trava de Margem Mínima.</p>
+          <p>1,75% base e a tabela de aceleração (seção 08) só valem para vendas com margem de 20% ou mais. Abaixo disso, a comissão daquela venda cai para um valor fixo reduzido — ver seção 07, Trava de Margem Mínima.</p>
         </div>
       </div>
       <div class="grid-2" style="max-width:44rem;">
@@ -515,8 +553,8 @@
       </div>
     </section>
 
-    <section id="margem">
-      <p class="eyebrow">06 — Trava de Margem Mínima</p>
+    <section id="margem" class="alt">
+      <p class="eyebrow">07 — Trava de Margem Mínima</p>
       <h2>Comissão condicionada à margem da venda</h2>
       <p class="lead">A taxa de 1,75% — e toda a tabela de superação de meta — pressupõe margem mínima de 20% na venda. Abaixo disso, a comissão daquela venda passa a ser um valor fixo reduzido, fora da lógica de faixas de superação. A trava vale só para a comissão (base + bônus de meta); não afeta o fixo nem o bônus de atividade.</p>
       <div class="table-wrap">
@@ -533,10 +571,10 @@
       </div>
     </section>
 
-    <section id="bonus" class="alt">
-      <p class="eyebrow">07 — Bônus por Superação de Meta</p>
+    <section id="bonus">
+      <p class="eyebrow">08 — Bônus por Superação de Meta</p>
       <h2>Quanto mais você extrapola a meta, maior a taxa — só sobre o excedente</h2>
-      <p class="lead">Apurado ao final de cada trimestre, comparando o total recebido no período com a meta daquele trimestre. Cada taxa da tabela abaixo incide <strong>só sobre o trecho da receita que cai naquela faixa</strong> — a comissão base de 1,75% sobre a meta (seção 05) não muda. Pago uma única vez, no fechamento do trimestre, somado à comissão base do período. <strong>Vale a mesma trava de margem ≥20% da seção 06</strong> — abaixo disso, essas taxas não se aplicam.</p>
+      <p class="lead">Apurado ao final de cada trimestre, comparando o total recebido no período com a meta daquele trimestre. Cada taxa da tabela abaixo incide <strong>só sobre o trecho da receita que cai naquela faixa</strong> — a comissão base de 1,75% sobre a meta (seção 06) não muda. Pago uma única vez, no fechamento do trimestre, somado à comissão base do período. <strong>Vale a mesma trava de margem ≥20% da seção 07</strong> — abaixo disso, essas taxas não se aplicam.</p>
       <div class="table-wrap">
         <table>
           <thead>
@@ -571,11 +609,11 @@
           <div class="exresult"><span class="rlabel">Bônus por fatia</span><span class="rval num" id="ex3bonus">R$ 30.000</span></div>
         </div>
       </div>
-      <p class="ex-caption">Exemplos calculados sobre a meta total anual (<span id="capMeta">R$ 6.000.000</span>), com cada faixa representando 20 pontos percentuais de superação (<span id="capBand">R$ 1.200.000</span>). A faixa acima de 140% não tem limite de valor — a taxa de 2,50% vale para todo o excedente a partir daí, não só para uma fatia de 20 p.p.; o card acima mostra o bônus de uma única fatia de referência para comparar com as outras faixas, mas quem superar por mais de 20 p.p. além de 140% ganha 2,50% sobre cada fatia adicional (os cenários da seção 09 já somam isso sem limite). Na prática, a apuração é feita a cada trimestre, sobre a meta daquele período — mas a lógica e as taxas são exatamente as mesmas.</p>
+      <p class="ex-caption">Exemplos calculados sobre a meta total anual (<span id="capMeta">R$ 6.000.000</span>), com cada faixa representando 20 pontos percentuais de superação (<span id="capBand">R$ 1.200.000</span>). A faixa acima de 140% não tem limite de valor — a taxa de 2,50% vale para todo o excedente a partir daí, não só para uma fatia de 20 p.p.; o card acima mostra o bônus de uma única fatia de referência para comparar com as outras faixas, mas quem superar por mais de 20 p.p. além de 140% ganha 2,50% sobre cada fatia adicional (os cenários da seção 11 já somam isso sem limite). Na prática, a apuração é feita a cada trimestre, sobre a meta daquele período — mas a lógica e as taxas são exatamente as mesmas.</p>
     </section>
 
-    <section id="pagamento">
-      <p class="eyebrow">08 — Regra de Pagamento</p>
+    <section id="pagamento" class="alt">
+      <p class="eyebrow">09 — Regra de Pagamento</p>
       <h2>Comissão e bônus seguem o recebimento do cliente</h2>
       <div class="cashrule">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
@@ -593,8 +631,8 @@
       </div>
     </section>
 
-    <section id="parceiros" class="alt">
-      <p class="eyebrow">09 — Vendas Diretas de Parceiros</p>
+    <section id="parceiros">
+      <p class="eyebrow">10 — Vendas Diretas de Parceiros</p>
       <h2>10% da comissão que a MAIS recebe, com trabalho comprovado</h2>
       <p class="lead">Quando um parceiro/fornecedor representado pela MAIS fecha a venda direto com o cliente, sem passar pela nota da MAIS, o valor não some do radar do consultor — desde que o esforço comercial seja comprovável.</p>
       <div class="grid-2" style="max-width:44rem;">
@@ -612,10 +650,10 @@
       <p class="ex-caption">Exemplo: o parceiro fecha a venda direto e paga R$ 100 de comissão à MAIS por aquela operação — o consultor recebe R$ 10 (10% dos R$ 100 que a MAIS recebeu), não 10% do valor da venda ao cliente final.</p>
     </section>
 
-    <section id="potencial">
-      <p class="eyebrow">10 — Potencial de Ganho</p>
+    <section id="potencial" class="alt">
+      <p class="eyebrow">11 — Potencial de Ganho</p>
       <h2>Projeção anual (fixo + variável)</h2>
-      <p class="lead">Três cenários de desempenho, considerando o mesmo nível de superação em todos os trimestres do ano e margem de venda de 20% ou mais (ver seção 06 — abaixo disso a comissão cai para os valores fixos reduzidos, não para esta tabela).</p>
+      <p class="lead">Três cenários de desempenho, considerando o mesmo nível de superação em todos os trimestres do ano e margem de venda de 20% ou mais (ver seção 07 — abaixo disso a comissão cai para os valores fixos reduzidos, não para esta tabela).</p>
       <div class="grid-3">
         <div class="stat-card">
           <div class="satt">Atingindo 100% da meta</div>
@@ -713,8 +751,65 @@
       </div>
     </section>
 
+    <section id="liquido">
+      <p class="eyebrow">12 — Comparação: Quanto Sobra Líquido</p>
+      <h2>Fixo em carteira, variável no cartão — o efeito na renda líquida</h2>
+      <p class="lead">Os R$5.000 do fixo são registrados em carteira (CLT), com desconto de INSS. Todo o variável — bônus de atividade e comissão — é pago via cartão de benefícios, sem incidência de INSS ou IR. Comparado a um modelo hipotético em que tudo fosse tributado em folha, o efeito na renda líquida mensal é este:</p>
+
+      <div class="grid-2" style="max-width:44rem; margin-bottom:1.8rem;">
+        <div class="comp-card">
+          <div class="cond">Fixo R$5.000 — bruto</div>
+          <div class="amount num">R$ 5.000,00</div>
+          <div class="cond">Desconto de INSS: R$ 501,51 · isento de IR (faixa de isenção até R$5.000, regra 2026)</div>
+        </div>
+        <div class="comp-card">
+          <div class="cond">Fixo R$5.000 — líquido</div>
+          <div class="amount num">R$ 4.498,49</div>
+          <div class="cond">O que efetivamente cai na conta todo mês</div>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Cenário</th>
+              <th style="text-align:right;">Variável médio/mês</th>
+              <th style="text-align:right;">Líquido se tudo fosse CLT</th>
+              <th style="text-align:right;">Líquido nesta proposta</th>
+              <th style="text-align:right;">Diferença/mês</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Atingindo 100% da meta</td>
+              <td class="rate num">R$ 10.750</td>
+              <td class="rate num">R$ 11.611,11</td>
+              <td class="rate num">R$ 15.248,49</td>
+              <td class="rate num" style="color:var(--accent-ink);">+R$ 3.637,38</td>
+            </tr>
+            <tr>
+              <td>Superando em 30%</td>
+              <td class="rate num">R$ 13.875</td>
+              <td class="rate num">R$ 13.876,74</td>
+              <td class="rate num">R$ 18.373,49</td>
+              <td class="rate num" style="color:var(--accent-ink);">+R$ 4.496,75</td>
+            </tr>
+            <tr class="capped">
+              <td>Superando em 80%<span class="cap-badge">Teto</span></td>
+              <td class="rate num">R$ 20.000</td>
+              <td class="rate num">R$ 18.317,36</td>
+              <td class="rate num">R$ 24.498,49</td>
+              <td class="rate num" style="color:var(--accent-ink);">+R$ 6.181,13</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="ex-caption">Cálculo com as regras de 2026 (isenção de IR até R$5.000/mês, tabela progressiva de INSS com teto de contribuição em R$988,09/mês). A coluna "se tudo fosse CLT" é hipotética, só para efeito de comparação — na proposta real, apenas o fixo passa por folha.</p>
+    </section>
+
     <section id="proximos" class="closing alt">
-      <p class="eyebrow">11 — Próximos Passos</p>
+      <p class="eyebrow">13 — Próximos Passos</p>
       <h2>O que vem a seguir</h2>
       <ul>
         <li>Alinhamento final da proposta e formalização por escrito.</li>
@@ -723,7 +818,7 @@
       </ul>
     </section>
 
-    <footer class="pagefoot">MAIS Soluções Industriais S/A · Filial ES · Proposta de remuneração — documento interno para avaliação, sujeito a ajustes antes da formalização.<br><br><strong>Rev. 02 (03/09/2026):</strong> meta ajustada de R$ 8.250.000 para R$ 6.000.000; comissão base de 1,25% para 1,75% (tabela de superação ajustada na mesma proporção); os componentes de visitas e oportunidades (R$ 1.000 + R$ 1.000, referência mensal) deixam de compor o fixo mensal e passam a ser bônus de atividade liquidado por trimestre.<br><br><strong>Rev. 03 (03/09/2026):</strong> adicionada a trava de margem mínima (seção 06) — comissão de 1,75% a 2,50% vale só para vendas com margem ≥20%; entre 15% e 20% de margem a comissão cai para 1,25% flat; abaixo de 15% cai para 0,75% flat. As projeções da seção 09 (Potencial de Ganho) assumem margem ≥20% em todas as vendas.<br><br><strong>Rev. 04 (03/09/2026):</strong> corrigido o rótulo do card "acima de 140%" na seção 07 — ele mostra o bônus de uma fatia de referência de 20 p.p. (R$30.000), não um teto de valor; a taxa de 2,50% vale sem limite para todo o excedente acima de 140%, como já estava correto nos cenários da seção 09.<br><br><strong>Rev. 05 (03/09/2026):</strong> reescritos os rótulos e a tabela da seção 07 — a taxa de cada faixa incide só sobre o trecho da receita que cai nela, nunca sobre o valor total recebido; a comissão base de 1,75% (seção 05) sempre incide sobre a meta, não sobre o recebido total. Os valores em R$ de todas as tabelas não mudaram nesta revisão — já estavam calculados dessa forma; o ajuste foi só de clareza, para a tabela não parecer uma taxa única por faixa de atingimento.<br><br><strong>Rev. 06 (03/09/2026):</strong> adicionada a seção 09 (Venda Direta de Fornecedor) — quando o fornecedor fecha a venda direto com o cliente, o valor ainda conta para o consultor se houver trabalho comercial comprovado (visita registrada e/ou OP cadastrada antes do fechamento): comissão base de 1,75% sobre o valor + conta 100% para a meta do trimestre. O mecanismo de pagamento nesses casos depende de como cada fornecedor trata a operação — regra proposta, pendente de confirmação antes de formalizar.<br><br><strong>Rev. 07 (03/09/2026):</strong> o campo "Meta anual individual" na capa agora é editável — mudar o valor recalcula automaticamente todas as tabelas e cards do documento (metas trimestrais, comissão base, bônus de superação, os 3 cenários da seção 09 e o detalhamento por trimestre). Nenhuma fórmula mudou nesta revisão, só ficou dinâmica.<br><br><strong>Rev. 08 (03/09/2026):</strong> removida a seção "Venda Direta de Fornecedor". Documento volta a ter 10 seções, terminando em Potencial de Ganho (09) e Próximos Passos (10).<br><br><strong>Rev. 09 (25/09/2026):</strong> reforçada a dependência de margem — seções 05 e 07 agora avisam diretamente que as taxas de comissão (base e aceleração) só valem para margem ≥20%, com link para a seção 06. Adicionada a seção 09 (Vendas Diretas de Parceiros): quando um parceiro fecha venda direto com o cliente e há trabalho comprovado (visita e/ou OP cadastrada antes do fechamento), o consultor recebe 10% da comissão que a própria MAIS recebe do parceiro — não 10% do valor da venda. Documento passa a ter 11 seções, terminando em Potencial de Ganho (10) e Próximos Passos (11).</footer>
+    <footer class="pagefoot">MAIS Soluções Industriais S/A · Filial ES · Proposta de remuneração — documento interno para avaliação, sujeito a ajustes antes da formalização.</footer>
   </main>
 </div>
 
@@ -741,7 +836,7 @@
   function set(id, text){ const el=document.getElementById(id); if(el) el.textContent = text; }
   function setWidth(id, pct){ const el=document.getElementById(id); if(el) el.style.width = Math.max(0,Math.min(100,pct)) + '%'; }
 
-  // taxa de cada faixa incide só sobre o trecho do excedente que cai nela (seção 07)
+  // taxa de cada faixa incide só sobre o trecho do excedente que cai nela (seção 08)
   function bonusFromExcess(excessValue, bandValue){
     let remaining = excessValue, bonus = 0;
     for(const r of [RATE_T1, RATE_T2]){
@@ -764,14 +859,14 @@
     set('q3val', fmtBRL(qmeta[2]));
     set('q4val', fmtBRL(qmeta[3]));
 
-    const band = 0.20*meta; // 20 p.p. da meta anual, referência dos cards da seção 07
+    const band = 0.20*meta; // 20 p.p. da meta anual, referência dos cards da seção 08
     set('ex1exc', fmtBRL(band)); set('ex1bonus', fmtBRL(band*RATE_T1));
     set('ex2exc', fmtBRL(band)); set('ex2bonus', fmtBRL(band*RATE_T2));
     set('ex3exc', fmtBRL(band)); set('ex3bonus', fmtBRL(band*RATE_TETO));
     set('capMeta', fmtBRL(meta));
     set('capBand', fmtBRL(band));
 
-    // seção 09 — tabela trimestral, cenário de 140% de atingimento em todos os trimestres
+    // seção 11 — tabela trimestral, cenário de 140% de atingimento em todos os trimestres
     const FIXO_TRI = FIXO_MES*3, ATIV_TRI = ATIV_MES*3;
     let totMeta=0, totCombase=0, totBonusmeta=0, totComtotal=0, totTotal=0;
     ['q1','q2','q3','q4'].forEach((id,i)=>{
@@ -794,7 +889,7 @@
     set('totcomtotal', fmtBRL(totComtotal));
     set('tottotal', fmtBRL(totTotal));
 
-    // seção 09 — 3 cenários anuais (100% / +30% / +80%), sem limite acima de 140%
+    // seção 11 — 3 cenários anuais (100% / +30% / +80%), sem limite acima de 140%
     const fixoAno=FIXO_MES*12, ativAno=ATIV_MES*12, combaseAno=RATE_BASE*meta;
     const cenarios = [0, 0.30, 0.80].map(pctOver=>{
       const bonus = bonusFromExcess(pctOver*meta, band);
